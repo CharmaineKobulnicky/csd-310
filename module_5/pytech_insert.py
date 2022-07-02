@@ -4,19 +4,10 @@ MongoDB: insert_one()
 students = {
 "first_name": "Charmaine"
 }
-
 MongoDB: insert_one()
-students = {
-    "student_id": "1007",
-},
-{
-    "student_id": "1008",
-},
-{
-    "student_id": "1009"
+student_id = {
+    "student_id": "1007, 1008, 1009"
 }
-
 charmaine_student_id = students.insert_one(1007, 1008, 1009).inserted_id
 
 print (charmaine_student_id)
-
