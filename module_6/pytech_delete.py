@@ -34,3 +34,4 @@ new_student_list = students.find({})
 print("\n -- DISPLAYING STUDENTS DOCUMENTS FROM find() QUERY --")
 for doc in new_student_list:
     print(" Student ID: " + doc["student_id"] + "\n First Name: " + doc["first_name"] + "\n Last Name: " + doc["last_name"] + "\n")
+
