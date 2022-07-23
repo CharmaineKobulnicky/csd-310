@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 DROP USER IF EXISTS 'pysports_user'@'localhost';
 
 CREATE USER 'pysports_user'@'localhost' IDENTIFIED WITH mysql_native_password by '#dontBreakMe1';
@@ -53,3 +54,6 @@ INSERT INTO player(first_name, last_name, team_id)
 
 INSERT INTO player(first_name, last_name, team_id)
     VALUES('Ric', 'Dre', (SELECT team_id FROM team WHERE team_name = 'Team Shur'));
+=======
+
+>>>>>>> 97be1e19a1237ec4b0acf441109891622316bb78

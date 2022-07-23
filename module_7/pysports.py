@@ -1,5 +1,3 @@
-from optparse import Values
-from tkinter.tix import InputOnly
 import mysql.connector
 
 mydb = mysql.connector.connect(
@@ -11,8 +9,8 @@ mydb = mysql.connector.connect(
 
 mycursor = mydb.cursor()
 
-mycursor.execute("players (player_id '1', first_name 'John', last_name 'Smith'), (player_id '2', first_name 'Tim', last_name 'Walker')")
+mycursor.execute("player (player_id '1', first_name 'John', last_name 'Smith'), (player_id '2', first_name 'Tim', last_name 'Walker')")
 
-for players in mycursor:
-    print(players)
+for player in mycursor:
+    print(player)
     
