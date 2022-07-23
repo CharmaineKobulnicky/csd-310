@@ -53,3 +53,4 @@ finally:
     """ close the connection to MySQL """
 
     db.close()
+
