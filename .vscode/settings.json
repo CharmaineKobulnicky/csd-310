@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
+        "Cris",
         "errorcode",
         "hanz",
         "mycursor",
@@ -8,19 +9,5 @@
         "pysports",
         "pytech"
     ],
-    "sqltools.connections": [
-        {
-            "mysqlOptions": {
-                "authProtocol": "default"
-            },
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 3306,
-            "driver": "MySQL",
-            "name": "MySQL80",
-            "database": "pysports",
-            "username": "root",
-            "password": "#dontBreakMe1"
-        }
-    ]
+    "sqltools.connections": []
 }

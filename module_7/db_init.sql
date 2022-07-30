@@ -1,8 +1,8 @@
-DROP USER IF EXISTS 'root'@'localhost';
+DROP USER IF EXISTS 'pysports_cha'@'localhost';
 
-CREATE USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '#dontBreakMe1';
+CREATE USER 'pysports_cha'@'localhost' IDENTIFIED WITH mysql_native_password BY '$lady#';
 
-GRANT ALL PRIVILEGES ON pysports. * TO 'root'@'localhost';
+GRANT ALL PRIVILEGES ON pysports. * TO 'pysports_cha'@'localhost';
 
 
 DROP TABLE IF EXISTS player;
@@ -19,8 +19,8 @@ CREATE TABLE team (
 
 CREATE TABLE player (
     player_id     INT          NOT NULL        AUTO_INCREMENT,
-    first_name    VARCHAR(75)  NOT NULL,
-    last_name     VARCHAR(75)  NOT NULL,
+    first_name    VARCHAR(200)  NOT NULL,
+    last_name     VARCHAR(200)  NOT NULL,
     team_id       INT          NOT NULL,
     PRIMARY KEY(player_id),
     CONSTRAINTS fk_team
