@@ -2,8 +2,8 @@ import mysql.connector
 from mysql.connector import errorcode
 
 config = {
-    "user": "root",
-    "password": "#dontBreakMe1",
+    "user": "pysports_cha",
+    "password": "$lady#",
     "host": "127.0.0.1",
     "database": "pysports",
     "raise_on_warnings": True
@@ -19,6 +19,15 @@ try:
     # inner join query
     cursor.execute("SELECT player_id, first_name, last_name, team_name FROM player INNER JOIN team ON player.team_id = team.team_id;")
 
+    # left outer join query
+    cursor.execute("SELECT player_id, first_name, last_name, team_name FROM player LEFT OUTER JOIN team ON player.team_id = team.team_id;")
+
+    # right outer join query
+    cursor.execute("SELECT player_id, first_name, last_name, team_name FROM player RIGHT OUTER JOIN team ON player.team_id = team.team_id;")
+
+    # where clause query
+    cursor.execute("SELECT first_name, last_name FROM player WHERE player_id = 3;")
+
     # get the results from the cursor object
     players = cursor.fetchall()
 
@@ -26,7 +35,7 @@ try:
 
     # iterate over the player data set and display the results
     for player in players:
-        print(" Player ID: {}\n First Name: {}\n Last Name: {}\n Team Name: {}\n.format(player[1], player[2], player[3], player[4], player[5], player[6])")
+        print(" Player ID: {}\n First Name: {}\n Last Name: {}\n Team Name: {}\n.format(player[0], player[1], player[2], player[3])")
 
     input("\n\n Press any key to continue... ")
 

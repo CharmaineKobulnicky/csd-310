@@ -46,6 +46,9 @@ INSERT INTO player(first_name, last_name, team_id)
     VALUES('Cris', 'Dur', (SELECT team_id FROM team WHERE team_name = 'Team Rein'));
 
 INSERT INTO player(first_name, last_name, team_id)
+    VALUES('Drew', 'Hanz', (SELECT team_id FROM team WHERE team_name = 'Team Rein'));
+
+INSERT INTO player(first_name, last_name, team_id)
     VALUES('Jane', 'Huss', (SELECT team_id FROM team WHERE team_name = 'Team Shur'));
 
 INSERT INTO player(first_name, last_name, team_id)
