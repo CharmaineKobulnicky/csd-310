@@ -3,8 +3,8 @@ from mysql.connector import errorcode
 
 
 config = {
-    "user": "root",
-    "password": "#dontBreakMe1",
+    "user": "pysports_cha",
+    "password": "$lady#",
     "host": "127.0.0.1",
     "database": "pysports",
     "raise_on_warnings": True
