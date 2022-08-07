@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 DROP USER IF EXISTS 'whatabook_user'@'localhost';
 
 CREATE USER 'whatabook_user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'MySQL8IsGreat!';
@@ -77,4 +78,6 @@ VALUES
 ('15', '11', '1'),
 ('16', '12', '4'),
 ('17', '13', '7');
+=======
+>>>>>>> 7397a9f103d9d7cc5f36d24d085ea39af87ef26f
 
