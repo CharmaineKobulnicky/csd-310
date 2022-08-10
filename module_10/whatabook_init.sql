@@ -72,33 +72,9 @@ VALUES
 ('13', 'David', 'Jones');
 
 
-# August 9 , 2022 updated comment. I had issue running this queries for INNER JOINs.
-
 INSERT INTO whatabook.wishlist(wishlist_id, user_id, book_id)
 VALUES
 ('15', '11', '1'),
 ('16', '12', '4'),
 ('17', '13', '7');
-
-
-# August 9 , 2022 updated comment. Added insertion to see if the queries run properly.
-
-INSERT INTO whatabook.wishlist(user_id, book_id)
-    VALUES(
-        (SELECT user_id FROM user WHERE first_name = 'Arnold'),
-        (SELECT book_id FROM book WHERE book_name = 'The Dreamer')
-    );
-
-    
-INSERT INTO whatabook.wishlist(user_id, book_id)
-    VALUES(
-        (SELECT user_id FROM user WHERE first_name = 'Tom'),
-        (SELECT book_id FROM book WHERE book_name = 'Mathematics')
-    );
-
-INSERT INTO whatabook.wishlist(user_id, book_id)
-    VALUES(
-        (SELECT user_id FROM user WHERE first_name = 'David'),
-        (SELECT book_id FROM book WHERE book_name = 'Solar Energy')
-    );
 
