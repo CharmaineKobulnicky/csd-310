@@ -34,12 +34,11 @@ def show_books(_cursor):
     # cursor object result
     books = _cursor.fetchall()
 
+    print("\n -- DISPLAYING BOOK LISTING --")
 
-print("\n -- DISPLAYING BOOK LISTING --")
-
-# Show the result and iterate whatabook data
-for book in show_books:
-    print("  Book Name: {}\n  Author: {}\n  Details: {}\n".format(book[0], book[1], book[2]))
+    # Show the result and iterate whatabook data
+    for book in books:
+        print("  Book Name: {}\n  Author: {}\n  Details: {}\n".format(book[0], book[1], book[2]))
 
 
 def show_locations(_cursor):
@@ -47,9 +46,9 @@ def show_locations(_cursor):
 
     locations = _cursor.fetchall()
 
-print("\n  -- DISPLAYING STORE LOCATIONS --")
+    print("\n  -- DISPLAYING STORE LOCATIONS --")
 
-for location in show_locations:
+    for location in locations:
         print("  Locale: {}\n".format(location[1]))
 
 
@@ -96,10 +95,10 @@ def show_wishlist(_cursor, _user_id):
 
     wishlist = _cursor.fetchall()
 
-print("\n        -- DISPLAYING WISHLIST ITEMS --")
+    print("\n        -- DISPLAYING WISHLIST ITEMS --")
 
-for book in show_wishlist:
-        print("        Book Name: {}\n        Author: {}\n".format(book[4], book[5]))
+    for book in wishlist:
+        print("        Book Name: {}\n        Author: {}\n".format(book[1], book[4], book[7]))
 
 def show_books_to_add(_cursor, _user_id):
     """ query the database for a list of books not in the users wishlist """
@@ -114,10 +113,9 @@ def show_books_to_add(_cursor, _user_id):
 
     books_to_add = _cursor.fetchall()
 
+    print("\n        -- DISPLAYING AVAILABLE BOOKS --")
 
-print("\n        -- DISPLAYING AVAILABLE BOOKS --")
-
-for book in show_books_to_add:
+    for book in books_to_add:
         print("        Book Id: {}\n        Book Name: {}\n".format(book[0], book[1]))
 
 def add_book_to_wishlist(_cursor, _user_id, _book_id):
@@ -207,4 +205,7 @@ except mysql.connector.Error as err:
 finally:
     """ close the connection to MySQL """
 
-    db.close()  
+    db.close()
+
+
+""" Reference: Professor Krasso. (2020, July 16). GitHub repository. csd-310/module_12/what_a_book.py """
